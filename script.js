@@ -23,7 +23,7 @@ $(function () {
   $(".time-block").each(function() {
     var currentHour = dayjs().hour();
     var currentID = $(this).attr("id");
-    console.log(currentID);
+    
     var blockHour = parseInt(currentID.split("-")[1]);
     
     if (blockHour < currentHour) {
