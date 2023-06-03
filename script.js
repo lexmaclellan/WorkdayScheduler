@@ -15,8 +15,13 @@ $(function () {
   $(".saveBtn").on ('click', function() {
     var time = $(this).parent().attr("id");
     var value = $(this).siblings(".description").val();
-    localStorage.setItem(time, value);
-    
+
+    if (value) {
+      localStorage.setItem(time, value);
+    }
+    else {
+      localStorage.removeItem(time);
+    }
   })
 
   // TODO: Add code to apply the past, present, or future class to each time
@@ -24,9 +29,10 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
-  var currentHour = dayjs().hour();
   $(".time-block").each(function() {
+    var currentHour = dayjs().hour();
     var currentID = $(this).attr("id");
+    console.log(currentID);
     var blockHour = parseInt(currentID.split("-")[1]);
     
     if (blockHour < currentHour) {
@@ -37,6 +43,11 @@ $(function () {
     }
     else {
       $(this).addClass("future");
+    }
+
+    var storage = localStorage.getItem(currentID);
+    if (storage) {
+      $(this).children(".description").val(storage);
     }
   })
   
