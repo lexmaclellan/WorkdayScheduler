@@ -1,5 +1,4 @@
 # WorkdayScheduler
-[https://lexrayne.github.io/UNBBootcampQuizChallenge/](https://lexrayne.github.io/UNBBootcampSchedulerChallenge/)
 
 ## Description
 A simple calendar app that stores events throughout the workday.
