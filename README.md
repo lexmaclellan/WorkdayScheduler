@@ -1,4 +1,4 @@
-# UNBBootcampSchedulerChallenge
+# WorkdayScheduler
 [https://lexrayne.github.io/UNBBootcampQuizChallenge/](https://lexrayne.github.io/UNBBootcampSchedulerChallenge/)
 
 ## Description
